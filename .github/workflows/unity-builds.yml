@@ -1,0 +1,49 @@
+name: Build Pac-Man Settings
+
+on:
+  workflow_dispatch:
+
+jobs:
+  unity-build:
+    name: ${{ matrix.targetPlatform }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform:
+          - StandaloneWindows64
+          - Android
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Cache Unity Library
+        uses: actions/cache@v4
+        with:
+          path: Pac-man/Library
+          key: Library-${{ matrix.targetPlatform }}-${{ hashFiles('Pac-man/Assets/**', 'Pac-man/Packages/**', 'Pac-man/ProjectSettings/**') }}
+          restore-keys: |
+            Library-${{ matrix.targetPlatform }}-
+            Library-
+
+      - name: Build
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: Pac-man
+          unityVersion: 2021.3.24f1
+          targetPlatform: ${{ matrix.targetPlatform }}
+          buildsPath: Pac-man/Builds
+          buildName: PacManSettings
+
+      - name: Upload Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: PacManSettings-${{ matrix.targetPlatform }}
+          path: Pac-man/Builds/${{ matrix.targetPlatform }}

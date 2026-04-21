@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - logic
+  - dot
+  - powerDot
+  - ghost
+  - pacman
+  - fruit
+  - message
+  - highscore
+  - audio
+  - levelEnd
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: pacman
+    uniqueID: 3894860191
+    locked: 0
+  - name: ghost
+    uniqueID: 3056293851
+    locked: 0
+  - name: maze
+    uniqueID: 1409618611
+    locked: 0
