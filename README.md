@@ -15,6 +15,26 @@ Play modes:
 - Practice - slower ghosts, more lives, invincibility.
 - Zen - relaxed speed and long frightened windows.
 
+## Install
+
+Download the latest release from [GitHub Releases](https://github.com/proki000/pac-man-settings-ui/releases/latest).
+
+Windows:
+
+1. Download `PacManSettings-Windows.zip`.
+2. Right-click the zip file and choose `Extract All`.
+3. Open the extracted folder.
+4. Run `PacManSettings.exe`.
+
+Android:
+
+1. Download `PacManSettings.apk` on your Android device.
+2. Open the APK file.
+3. Allow installation from your browser or file manager if Android asks.
+4. Launch `PacManSettings` after it installs.
+
+If Windows or Android warns that the app came from the internet, choose the option to keep/open/install it only if you trust this release.
+
 ## Build APK and Windows
 
 Open `Pac-man` in Unity `2021.3.24f1`, or run the local batch build script:
@@ -32,7 +52,8 @@ The repo also includes `.github/workflows/unity-builds.yml` for GitHub Actions b
 
 ## How to play
 
-- Windows: [download](https://github.com/Couleslaw/Pac-man/releases/latest) the zip file, extract it and run the `.exe` file.
+- Windows: [download](https://github.com/proki000/pac-man-settings-ui/releases/latest) the zip file, extract it and run the `.exe` file.
+- Android: [download](https://github.com/proki000/pac-man-settings-ui/releases/latest) the APK file and install it on your device.
 - Linux and Mac: download the source code, open it in Unity and build the game for your platform.
 
 ## Game description
