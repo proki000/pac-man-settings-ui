@@ -2,6 +2,9 @@ name: Build Pac-Man Settings
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   unity-build:
